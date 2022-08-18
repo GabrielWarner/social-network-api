@@ -30,10 +30,10 @@ module.exports = {
             { $set: req.body },
             { runValidators: true, new: true }
           )
-            .then((video) =>
-              !video
+            .then((user) =>
+              !user
                 ? res.status(404).json({ message: 'No user with this id!' })
-                : res.json(video)
+                : res.json(user)
             )
             .catch((err) => {
               console.log(err);
