@@ -26,6 +26,6 @@ const userSchema = new Schema(
   });
 
   // Initialize our Post model
-const User = model('user', postSchema);
+const User = model('user', userSchema);
 
-module.exports = Post;
+module.exports = User;
