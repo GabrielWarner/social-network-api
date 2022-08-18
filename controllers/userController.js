@@ -23,4 +23,20 @@ module.exports = {
         .then((dbUserData) => res.json(dbUserData))
         .catch((err) => res.status(500).json(err));
     },
+    updateSingleUser(req,res) {
+        User.findOneAndUpdate(
+            { _id: req.params.userId },
+            { $set: req.body },
+            { runValidators: true, new: true }
+          )
+            .then((video) =>
+              !video
+                ? res.status(404).json({ message: 'No user with this id!' })
+                : res.json(video)
+            )
+            .catch((err) => {
+              console.log(err);
+              res.status(500).json(err);
+            });
+    }
   };
