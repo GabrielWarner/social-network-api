@@ -18,10 +18,10 @@ module.exports = {
   // create a new thought
   createThought(req, res) {
     Thought.create(req.body)
-      .then((post) => {
+      .then((thought) => {
         return User.findOneAndUpdate(
           { _id: req.body.userId },
-          { $addToSet: { posts: post._id } },
+          { $addToSet: { thoughts: thought._id } },
           { new: true }
         );
       })
