@@ -3,15 +3,15 @@ const { Thought, User } = require('../models');
 module.exports = {
   getThoughts(req, res) {
     Thought.find()
-      .then((thought) => res.json(thoughts))
+      .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
-      .then((post) =>
-        !post
-          ? res.status(404).json({ message: 'No thoughts with that ID' })
-          : res.json(post)
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: 'No thought with that ID' })
+          : res.json(user)
       )
       .catch((err) => res.status(500).json(err));
   },

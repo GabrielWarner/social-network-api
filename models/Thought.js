@@ -10,7 +10,7 @@ const reactionSchema = new mongoose.Schema({
 
 const thoughtSchema = new Schema (
     {
-        thoughtText: {type:String, required: true, minlength: 1, maxlength: 180,},
+        thoughtText: {type:String, required: true, minlength: 1, maxlength: 280,},
         //TODO: FORMAT DATE TIME
         createdAt: { type: Date, default: Date.now },
         username: {type: String, required: true,},
