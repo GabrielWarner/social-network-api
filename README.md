@@ -5,7 +5,7 @@
 ## Description
 In this application I built a backend API that mocks a social media website that lets you create a User and add thoughts to that user which would in comparison to creating a post on a social media site. You also have the ability to add reactions to thoughts which are mimiking comments on a social media post. In this application I used Express to build the API routes and Mongoose to setup the database and build schemas for the Models.
 
-Video Walkthrough: 
+Video Walkthrough: chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/af83fb40-2cef-4791-y64a-2bd2b9a6c54e
 
 ![image](https://user-images.githubusercontent.com/98490756/185527548-83f602fe-0d70-43e7-ab7e-a049de9148c8.png)
 
